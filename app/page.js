@@ -1,113 +1,187 @@
 import Image from "next/image";
+import { Gothic_A1 } from "next/font/google";
+import Bullet from "@/components/bullet";
+import ArrowRight from "@/components/arrow-right";
+import SubBullet from "@/components/sub-bullet";
+
+const gothicBold = Gothic_A1({
+  weight: '600',
+  subsets: ['latin'],
+})
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="flex align-center">
+      <div className="m-auto max-w-screen-sm w-full">
+        <div className="m-6">
+          <div className={`${gothicBold.className} pt-6 text-3xl text-center`}>
+            Matt Eddy's LinkedIn Profile
+          </div>
+        
+          <img className="w-64 border-2 my-12 m-auto rounded-full" src="./me.png" />
+          <div className={`${gothicBold.className} text-2xl`}>
+            Wait this isn't a LinkedIn...
+          </div>
+          <div className="mt-6">
+            That's correct! I have never had a LinkedIn but recruiter friends have told me this can be a red flag. This website is an attempt to assuage those concerns by creating my own professional digital profile.
+          </div>
+
+          <div className={`${gothicBold.className} text-2xl mt-6`}>
+            Why not just make a LinkedIn?
+          </div>
+          <div className="mt-6">
+            LinkedIn is a bummer. While I understand it is a valuable and necessary tool for some, I find the content there to be exhausting. It seemed more fun and creative to make my own.
+          </div>
+
+          <div className="mt-2">
+            I'm looking to work for a company that appreciates creativity and people who think for themselves.
+          </div>
+
+          <div className={`${gothicBold.className} mt-6 text-2xl`}>
+            Work Experience
+          </div>
+
+          <div className="text-xl mt-1 flex items-center">
+            <div className="mr-auto text-lg">Solo Founder</div>
+            <div className="ml-auto">Blueberry</div>
+          </div>
+          <div className="text flex items-center">
+            Dec 2023 - Present
+          </div>
+          <div className="text-sm">
+            <div className="flex items-center mt-2">
+              <div className="p-2"><Bullet /></div>
+              <div>Founded developer tools SaSS startup focused on interactive application customization - getblueberry.io</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Grew company from initial idea to profitability within six months.</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Defined company vision, handled all business development and sales, and created marketing strategy</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Owned all aspects of product development, architecture and technical implementation</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Designed highly-scalable and cost-efficient architecture, leveraging edge compute and edge caching to minimize latency and meet performance target</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Created refined, intuitive developer experience and lightweight, production-grade client libraries for simple application integration</div>
+            </div>
+          </div>
+
+          <div className="text-xl mt-6 flex items-center">
+            <div className="text-lg mr-auto">Software Engineer <ArrowRight /> Senior
+            Staff Software Engineer</div>
+            <div className="ml-auto">Outreach</div>
+          </div>
+          <div className="text flex items-center">
+            February 2018 - Dec 2023
+          </div>
+          <div className="text-sm">
+            <div className="flex items-center mt-2">
+              <div className="p-2"><Bullet /></div>
+              <div>Promoted three times during tenure</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Led team of 4 in complete overhaul of email syncing and storage:</div>
+            </div>
+            <div className="flex items-center">
+              <div className="ml-6 p-2"><SubBullet /></div>
+              <div>Architected constellation of Go services responsible for storage of 7 billion emails and 1.2 Petabytes of data</div>
+            </div>
+            <div className="flex items-center">
+              <div className="ml-6 p-2"><SubBullet /></div>
+              <div>Managed outside stakeholders, created timelines, and was the main point of contact for upper management</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Led team of 3 upgrading 550k line Rails codebase from Ruby 2.6.3 to Ruby 2.7.5 and then Ruby 3.1.3. Led the same team through upgrading Rails from 5.2.6 to 6.1.5</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Led a multiteam live migration off of chef based Kafka clusters to Amazon managed Kafka clusters</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Led a migration from chef based RabbitMQ cluster to kubernetes operated RabbitMQ cluster and modernized RabbitMQ usage</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Led MySQL optimization efforts, reducing writer usage by 31% and reducing server p90 latency across the board by 30ms by creating novel performance tooling.</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Automated hotfix process into a single Go CLI command, decreasing mean time to incident recovery</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Built, maintained, and deployed many features in Go, Ruby, and Javascript</div>
+            </div>
+          </div>
+          <div className="text-xl mt-6 flex items-center">
+            <div className="text-lg mr-auto">Software Engineer</div>
+            <div className="ml-auto">Zesty</div>
+          </div>
+          <div className="text flex items-center">
+            October 2015 - October 2017
+          </div>
+          <div className="text-sm">
+            <div className="flex items-center mt-2">
+              <div className="p-2"><Bullet /></div>
+              <div>Built, maintained, and deployed features in Ruby and Javascript</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Rewrote business critical accounting and worker scheduling systems</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Designed and deployed containerized monitoring stack</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Migrated background processing to a more efficient debuggable platform</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Created internal code review and tech-support processes</div>
+            </div>
+          </div>
+
+          <div className="text-xl mt-6 flex items-center">
+            <div className="text-lg mr-auto">Software Engineer</div>
+            <div className="ml-auto">Foraker Labs</div>
+          </div>
+          <div className="text flex items-center">
+            April 2014 - June 2015
+          </div>
+          <div className="text-sm">
+            <div className="flex items-center mt-2">
+              <div className="p-2"><Bullet /></div>
+              <div>Built, maintained, and deployed features in Ruby and Javascript</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Communicated directly with clients and demoed new features</div>
+            </div>
+            <div className="flex items-center">
+              <div className="p-2"><Bullet /></div>
+              <div>Gathered requirements and wrote/estimated user stories</div>
+            </div>
+            <div className="flex items-center mb-16">
+              <div className="p-2"><Bullet /></div>
+              <div>Helped write ETL tools to migrate legacy systems to new data models</div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
