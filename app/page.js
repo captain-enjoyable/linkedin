@@ -51,7 +51,7 @@ export default function Home() {
           <div className="text-sm">
             <div className="flex items-center mt-2">
               <div className="p-2"><Bullet /></div>
-              <div>Founded developer tools SaSS startup focused on interactive application customization - getblueberry.io</div>
+              <div>Founded developer tools SaSS startup focused on interactive application customization - <a className="text-primary" href="https://www.getblueberry.io">getblueberry.io</a></div>
             </div>
             <div className="flex items-center">
               <div className="p-2"><Bullet /></div>
