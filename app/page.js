@@ -23,7 +23,7 @@ export default function Home() {
             Wait this isn't a LinkedIn...
           </div>
           <div className="mt-6">
-            That's correct! I have never had a LinkedIn but recruiter friends have told me this can be a red flag. This website is an attempt to assuage those concerns by creating my own professional digital profile.
+            That's correct! I have never had a LinkedIn but recruiter friends have told me this can be a red flag. This website is an attempt to assuage any concerns by creating my own professional digital profile.
           </div>
 
           <div className={`${gothicBold.className} text-2xl mt-6`}>
