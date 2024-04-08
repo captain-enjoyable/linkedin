@@ -15,27 +15,10 @@ export default function Home() {
       <div className="m-auto max-w-screen-sm w-full">
         <div className="m-6">
           <div className={`${gothicBold.className} pt-6 text-3xl text-center`}>
-            Matt Eddy's LinkedIn Profile
+            Matt Eddy
           </div>
         
           <img className="w-64 border-2 my-12 m-auto rounded-full" src="./me.png" />
-          <div className={`${gothicBold.className} text-2xl`}>
-            Wait this isn't a LinkedIn...
-          </div>
-          <div className="mt-6">
-            That's correct! I have never had a LinkedIn but recruiter friends have told me this can be a red flag. This website is an attempt to assuage any concerns by creating my own professional digital profile.
-          </div>
-
-          <div className={`${gothicBold.className} text-2xl mt-6`}>
-            Why not just make a LinkedIn?
-          </div>
-          <div className="mt-6">
-            LinkedIn is a bummer. While I understand it is a valuable and necessary tool for some, I find the content there to be exhausting. It seemed more fun and creative to make my own.
-          </div>
-
-          <div className="mt-2">
-            I'm looking to work for a company that appreciates creativity and people who think for themselves.
-          </div>
 
           <div className={`${gothicBold.className} mt-6 text-2xl`}>
             Work Experience
